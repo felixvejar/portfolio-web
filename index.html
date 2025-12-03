@@ -449,6 +449,13 @@
         flex-direction: column;
       }
     }
+    .project-thumb {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+  display: block;
+}
   </style>
 </head>
 <body>
@@ -547,19 +554,24 @@
         </div>
 
         <!-- Resumen Proyectos top -->
-        <div id="proyectos">
-          <div class="section-header" style="margin-bottom:0.75rem;">
-            <div class="section-eyebrow">Portafolio</div>
-            <h2 class="section-title" style="font-size:1.05rem;">Proyectos destacados</h2>
-          </div>
+        <section class="section" id="proyectos">
+      <div class="section-header">
+        <div class="section-eyebrow">Portafolio</div>
+        <h2 class="section-title" style="font-size:1.05rem;">Proyectos destacados</h2>
+      </div>
+
+      <div class="two-column">
+        <!-- Proyectos top -->
+        <div>
 
           <div class="card">
-            <p class="project-tagline">Embudo · Marketing Analytics</p>
-            <h3>Marketing Funnel Analysis</h3>
+            <img class="project-thumb" src="proj-funnel.png" alt="Proyecto de análisis de marketing">
+            <p class="project-tagline">Marketing · Análisis de datos</p>
+            <h3>Marketing Performance Analysis</h3>
             <p>
-              Análisis del desempeño del embudo de marketing para entender el comportamiento de los usuarios
-              desde la impresión hasta la conversión. Incluye métricas clave (CTR, CR, abandono por etapa) y
-              recomendaciones basadas en datos.
+              Análisis del desempeño de una campaña de marketing usando datos de interacción y conversión.
+              Exploro métricas clave, detecto patrones en el comportamiento de los usuarios y propongo
+              recomendaciones basadas en datos para mejorar los resultados.
             </p>
             <p class="meta">
               Código / notebook:
@@ -574,6 +586,7 @@
           </div>
 
           <div class="card">
+            <img class="project-thumb" src="proj-abtest.png" alt="Proyecto de A/B testing">
             <p class="project-tagline">Experimentación · Pruebas de hipótesis</p>
             <h3>A/B Testing para Optimizar Conversión</h3>
             <p>
@@ -597,6 +610,9 @@
             telecomunicaciones en la sección de proyectos completa.
           </p>
         </div>
+
+        <!-- Columna vacía (si quieres, luego la usamos para otra cosa) -->
+        <div></div>
       </div>
     </section>
 
@@ -613,6 +629,7 @@
 
       <div class="projects-grid">
         <div class="card">
+          <img class="project-thumb" src="proj-videogames.png" alt="Proyecto de análisis de videojuegos">
           <p class="project-tagline">Storytelling · Exploración</p>
           <h3>Exploración y Dashboard del Mercado de Videojuegos</h3>
           <p>
@@ -632,6 +649,7 @@
         </div>
 
         <div class="card">
+          <img class="project-thumb" src="proj-events.png" alt="Proyecto de análisis de eventos">
           <p class="project-tagline">Comportamiento de usuario</p>
           <h3>Event-Based User Behavior Analysis</h3>
           <p>
@@ -650,6 +668,7 @@
         </div>
 
         <div class="card">
+          <img class="project-thumb" src="proj-taxis.png" alt="Análisis del servicio de taxis">
           <p class="project-tagline">Series de tiempo · patrones</p>
           <h3>Chicago Taxi Ride Analysis</h3>
           <p>
@@ -668,6 +687,7 @@
         </div>
 
         <div class="card">
+          <img class="project-thumb" src="proj-telecom.png" alt="Proyecto de datos en telecomunicaciones">
           <p class="project-tagline">Sector telecom · negocio</p>
           <h3>Análisis de Datos en Telecomunicaciones</h3>
           <p>
@@ -835,4 +855,5 @@
 
 </body>
 </html>
+
 
