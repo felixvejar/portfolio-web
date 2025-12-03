@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portafolio de Datos - Félix Véjar </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      padding: 2rem 1.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .title-block h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .title-block p {
+      color: #9ca3af;
+      max-width: 32rem;
+    }
+    .tag {
+      display: inline-block;
+      background: #1f2937;
+      color: #e5e7eb;
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #1f2937;
+      padding-bottom: 0.3rem;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid #111827;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: #111827;
+      color: #e5e7eb;
+      border: 1px solid #1f2937;
+    }
+
+    .projects-list .card {
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+      cursor: pointer;
+    }
+    .projects-list .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.6);
+      border-color: #38bdf8;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 0.3rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    .contact-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      border-top: 1px solid #111827;
+      font-size: 0.8rem;
+      color: #6b7280;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title-block">
+      <h1>Félix Véjar</h1>
+      <p>
+  Analista de Datos enfocado en inteligencia de negocio, visualización estratégica y automatización de reportes para decisiones ejecutivas.
+</p>
+      <div>
+        <span class="tag">SQL</span>
+        <span class="tag">Python</span>
+        <span class="tag">Tableau / Power BI</span>
+        <span class="tag">Análisis de negocio</span>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:0.9rem; color:#9ca3af;">
+        Ciudad de México · Remoto<br />
+        <a href="mailto:felixvejarzepeda@yahoo.com.com">felixvejarzepeda@yahoo.com.com</a><br />
+        <a href="https://www.linkedin.com/in/f%C3%A9lix-v%C3%A9jar-zepeda-339404120/" target="_blank">LinkedIn</a> ·
+        <a href="https://github.com/felixvejar" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Columna izquierda -->
+    <div>
+      <section>
+  <h2>Sobre mí</h2>
+  <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+    Soy Analista de Datos con experiencia en inteligencia de negocio, visualización y storytelling para
+    apoyar decisiones estratégicas. He trabajado tanto en asociaciones del sector industrial como en
+    empresas privadas, conectando indicadores con acciones concretas para dirección, marketing y operaciones.
+  </p>
+  <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+    Actualmente desarrollo análisis y reportes del mercado de pinturas y recubrimientos, integrando fuentes
+    públicas y datos internos para construir informes ejecutivos y dashboards claros. Antes de eso, trabajé
+    en roles de Business Intelligence y e-commerce, donde automatizé reportes, di seguimiento al desempeño
+    comercial y colaboré con equipos globales.
+  </p>
+  <p style="font-size:0.9rem;">
+    Me siento cómodo trabajando con SQL, Python, Excel avanzado y herramientas de visualización como Tableau
+    y Power BI. Disfruto tomar datasets complejos, limpiarlos, entender la historia que cuentan y traducirlos
+    en insights accionables para el negocio, idealmente en entornos remotos y colaborativos.
+  </p>
+</section>
+
+      <section>
+  <h2>Proyectos destacados</h2>
+  <div class="projects-list">
+
+    <!-- PROYECTO 1 -->
+    <article class="card">
+      <h3>1. Marketing Funnel Analysis</h3>
+      <p>
+        Análisis del desempeño del embudo de marketing para entender el comportamiento de los usuarios
+        desde la impresión hasta la conversión. Incluye métricas clave como CTR, CR, tasas de abandono
+        y recomendaciones basadas en datos.
+      </p>
+      <p class="meta">
+        Código / notebook:
+        <a href="https://github.com/felixvejar/my_first_marketing_analysis" target="_blank">Ver en GitHub</a>
+      </p>
+      <div class="pill-list">
+        <span class="pill">Python</span>
+        <span class="pill">Pandas</span>
+        <span class="pill">EDA</span>
+        <span class="pill">Marketing Analytics</span>
+      </div>
+    </article>
+
+    <!-- PROYECTO 2 -->
+    <article class="card">
+      <h3>2. A/B Testing para Optimizar Conversión</h3>
+      <p>
+        Evaluación de una prueba A/B para medir el impacto de variantes sobre la conversión. Incluye
+        hipótesis, test estadístico, análisis de significancia y recomendaciones accionables para el negocio.
+      </p>
+      <p class="meta">
+        Código / notebook:
+        <a href="https://github.com/felixvejar/my_first_a_b_testing" target="_blank">Ver en GitHub</a>
+      </p>
+      <div class="pill-list">
+        <span class="pill">Python</span>
+        <span class="pill">SciPy</span>
+        <span class="pill">Estadística</span>
+        <span class="pill">Pruebas de hipótesis</span>
+      </div>
+    </article>
+
+    <!-- PROYECTO 3 -->
+    <article class="card">
+      <h3>3. Exploración y Dashboard del Mercado de Videojuegos</h3>
+      <p>
+        Análisis de ventas globales de videojuegos: tendencias, géneros, plataformas y diferencias regionales.
+        Incluye visualizaciones comparativas y análisis exploratorio profundo de datos.
+      </p>
+      <p class="meta">
+        Código / notebook:
+        <a href="https://github.com/felixvejar/video-game-data-analysis" target="_blank">Ver en GitHub</a>
+      </p>
+      <div class="pill-list">
+        <span class="pill">Python</span>
+        <span class="pill">Visualización</span>
+        <span class="pill">EDA</span>
+        <span class="pill">Storytelling</span>
+      </div>
+    </article>
+
+    <!-- PROYECTO 4 -->
+    <article class="card">
+      <h3>4. Event-Based User Behavior Analysis</h3>
+      <p>
+        Estudio del comportamiento de usuarios usando datos basados en eventos. Identificación de patrones
+        de uso, puntos críticos dentro de los procesos y segmentos con comportamientos diferenciados.
+      </p>
+      <p class="meta">
+        Código / notebook:
+        <a href="https://github.com/felixvejar/event_based_anaylisis_aab" target="_blank">Ver en GitHub</a>
+      </p>
+      <div class="pill-list">
+        <span class="pill">Python</span>
+        <span class="pill">EDA</span>
+        <span class="pill">Event Analytics</span>
+      </div>
+    </article>
+
+    <!-- PROYECTO 5 -->
+    <article class="card">
+      <h3>5. Chicago Taxi Ride Analysis</h3>
+      <p>
+        Exploración de datos de viajes en taxi en Chicago: patrones temporales, comportamiento de tarifas,
+        estacionalidad y correlaciones entre distancia, tiempo y precio.
+      </p>
+      <p class="meta">
+        Código / notebook:
+        <a href="https://github.com/felixvejar/chicago_taxi_ride_analysis" target="_blank">Ver en GitHub</a>
+      </p>
+      <div class="pill-list">
+        <span class="pill">Python</span>
+        <span class="pill">Pandas</span>
+        <span class="pill">Tendencias temporales</span>
+      </div>
+    </article>
+
+    <!-- PROYECTO 6 -->
+    <article class="card">
+      <h3>6. Análisis de Datos en Telecomunicaciones</h3>
+      <p>
+        Proyecto de análisis aplicado al sector telecomunicaciones, evaluando patrones de uso y tendencias.
+        Útil para comprender comportamiento de clientes y métricas clave del sector.
+      </p>
+      <p class="meta">
+        Código / notebook:
+        <a href="https://github.com/felixvejar/telecommunications_project" target="_blank">Ver en GitHub</a>
+      </p>
+      <div class="pill-list">
+        <span class="pill">Python</span>
+        <span class="pill">EDA</span>
+        <span class="pill">Business Analytics</span>
+      </div>
+    </article>
+
+  </div>
+
+      </section>
+    </div>
+
+    <!-- Columna derecha -->
+    <div>
+      <section>
+        <h2>Skills</h2>
+        <div class="card">
+          <h3>Lenguajes &amp; herramientas</h3>
+          <div class="pill-list">
+            <span class="pill">SQL</span>
+            <span class="pill">Python</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">R (básico)</span>
+            <span class="pill">Tableau</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">Excel avanzado</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Tipo de análisis</h3>
+          <ul style="font-size:0.9rem; margin-left:1rem; list-style:disc;">
+            <li>Análisis descriptivo y exploratorio</li>
+            <li>Embudo de conversión y métricas de producto</li>
+            <li>Cohortes, retención y LTV</li>
+            <li>Dashboards ejecutivos y reportes recurrentes</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+  <h2>Experiencia resumida</h2>
+
+  <!-- ANAFAPYT -->
+  <div class="card">
+    <h3>Analista de Datos y Estadística · ANAFAPYT</h3>
+    <p class="meta">2024 – Actual</p>
+    <p>
+      Responsable de desarrollar el Informe Anual del mercado de pinturas y tintas, integrando datos
+      de INEGI, comercio exterior, industria, vivienda y construcción. Diseño dashboards y reportes ejecutivos,
+      automatizo procesos de análisis, realizo cruces sectoriales y traduzco información compleja en
+      insights claros para dirección y equipos técnicos.
+    </p>
+    <div class="pill-list" style="margin-top:0.6rem;">
+      <span class="pill">SQL</span>
+      <span class="pill">Python</span>
+      <span class="pill">EDA</span>
+      <span class="pill">Tableau</span>
+      <span class="pill">Power BI</span>
+    </div>
+  </div>
+
+  <!-- AXALTA -->
+  <div class="card">
+    <h3>Business Intelligence & E-commerce Specialist · Axalta México</h3>
+    <p class="meta">2021 – 2024</p>
+    <p>
+      Automatización de reportes comerciales, análisis de ventas, creación de dashboards para directores
+      y soporte a proyectos globales. Lideré iniciativas de e-commerce que mejoraron el desempeño del canal
+      y optimicé procesos de seguimiento comercial mediante herramientas de BI.
+    </p>
+    <div class="pill-list" style="margin-top:0.6rem;">
+      <span class="pill">ETL</span>
+      <span class="pill">Excel avanzado</span>
+      <span class="pill">Storytelling</span>
+      <span class="pill">KPI Tracking</span>
+      <span class="pill">E-commerce Analytics</span>
+    </div>
+  </div>
+
+  <!-- PROYECTOS PERSONALES -->
+  <div class="card">
+    <h3>Proyectos personales y portafolio</h3>
+    <p class="meta">2023 – Actual</p>
+    <p>
+      Desarrollo de análisis aplicados a marketing, producto y comportamiento de usuarios.
+      Trabajo con datasets públicos y privados para practicar embudos, pruebas A/B, cohortes,
+      tendencias temporales y análisis exploratorios más profundos.
+    </p>
+    <div class="pill-list" style="margin-top:0.6rem;">
+      <span class="pill">Python</span>
+      <span class="pill">Pandas</span>
+      <span class="pill">Cohortes</span>
+      <span class="pill">A/B Testing</span>
+      <span class="pill">EDA</span>
+    </div>
+  </div>
+
+</section>
+
+      <section>
+        <h2>Contacto</h2>
+        <ul class="contact-list">
+          <li>Correo: <a href="mailto:felixvejarzepeda@yahoo.com">felixvejarzepeda@yahoo.com</a></li>
+          <li>LinkedIn: <a href="https://https://www.linkedin.com/in/f%C3%A9lix-v%C3%A9jar-zepeda-339404120/" target="_blank">linkedin.com/in/tuusuario</a></li>
+          <li>GitHub: <a href="https://github.com/felixvejar" target="_blank">github.com/felixvejar</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Portafolio de datos · Construido con HTML y CSS · Deploy en Vercel
+  </footer>
+</body>
+</html>
