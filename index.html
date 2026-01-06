@@ -11,10 +11,11 @@
       --bg-soft: #f9fafb;
       --border-subtle: #e5e7eb;
       --border-strong: #d1d5db;
-      --accent: #2563eb;          /* azul como acento */
+      --accent: #2563eb;     /* Azul BI */
+      --accent2: #ec4899;    /* Magenta artístico */
       --accent-soft: #eff6ff;
       --text-main: #111827;
-      --text-muted: #6b7280;
+      --text-muted: #4b5563;
       --text-soft: #9ca3af;
     }
 
@@ -40,24 +41,18 @@
     }
 
     .page {
-      max-width: 1080px;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 1.5rem 1.25rem 3rem;
+      padding: 2rem 1.25rem 3rem;
     }
 
     /* NAV */
+
     .nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-      padding: 0.75rem 0 0.75rem;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-subtle);
+      align-items: center;
+      margin-bottom: 2rem;
     }
 
     .nav-left {
@@ -66,32 +61,31 @@
       gap: 0.5rem;
     }
 
-    .brand-dot {
-      width: 11px;
-      height: 11px;
+    .nav-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 999px;
-      background: var(--accent);
+      background: radial-gradient(circle at 30% 30%, var(--accent2), var(--accent));
     }
 
-    .brand-text {
-      font-size: 0.9rem;
+    .nav-name {
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
+      font-size: 0.85rem;
       color: var(--text-muted);
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
       gap: 0.75rem;
       font-size: 0.85rem;
     }
 
     .nav-links a {
-      color: var(--text-muted);
-      padding: 0.35rem 0.7rem;
+      padding: 0.35rem 0.75rem;
       border-radius: 999px;
+      color: var(--text-soft);
     }
 
     .nav-links a:hover {
@@ -113,9 +107,9 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
-      gap: 2.25rem;
-      margin-top: 2rem;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.1fr);
+      gap: 2rem;
+      margin-bottom: 2.5rem;
       align-items: center;
     }
 
@@ -135,8 +129,11 @@
 
     .hero-title {
       font-size: clamp(2rem, 4vw, 2.4rem);
-      font-weight: 650;
+      font-weight: 700;
       margin-bottom: 0.6rem;
+      background: linear-gradient(to right, #111827, #1e3a8a, #a21caf);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .hero-subtitle {
@@ -148,35 +145,35 @@
 
     .hero-quote {
       font-size: 0.9rem;
-      font-style: italic;
       color: var(--text-soft);
-      margin-bottom: 1.25rem;
+      font-style: italic;
+      margin-bottom: 1.1rem;
     }
 
     .hero-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      background: #ffffff;
-      color: var(--text-main);
+      font-size: 0.78rem;
       border-radius: 999px;
       padding: 0.25rem 0.75rem;
-      font-size: 0.75rem;
       border: 1px solid var(--border-subtle);
+      background: linear-gradient(to right, #ffffff, #f9fafb);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
     }
 
     .tag-dot {
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
-      background: var(--accent);
+      background: radial-gradient(circle at 30% 30%, var(--accent2), var(--accent));
     }
 
     .hero-actions {
@@ -201,14 +198,13 @@
     }
 
     .btn-primary {
-      background: var(--accent);
+      background: linear-gradient(to right, var(--accent), var(--accent2));
       color: #ffffff;
-      border-color: var(--accent);
+      border-color: transparent;
     }
 
     .btn-primary:hover {
-      background: #1d4ed8;
-      border-color: #1d4ed8;
+      filter: brightness(1.05);
       text-decoration: none;
     }
 
@@ -242,28 +238,29 @@
     .hero-photo {
       position: relative;
       width: min(260px, 70vw);
-      /* quitamos aspect-ratio para que no recorte fijo */
+      aspect-ratio: 4 / 5;
       border-radius: 1.5rem;
       overflow: hidden;
       border: 1px solid var(--border-subtle);
       background: var(--bg-soft);
       box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
-}
+    }
 
-.hero-photo img {
+    .hero-photo img {
       width: 100%;
-      height: auto;      /* respeta proporción real de la foto */
+      height: 100%;
+      object-fit: cover;
       display: block;
-      object-fit: contain;  /* encaja la imagen completa */
-}
+    }
+
     .hero-chip {
       position: absolute;
-      left: 0.7rem;
-      bottom: 0.7rem;
+      left: 0.8rem;
+      bottom: 0.8rem;
       background: rgba(255, 255, 255, 0.96);
       border-radius: 999px;
       border: 1px solid var(--border-subtle);
-      padding: 0.3rem 0.7rem;
+      padding: 0.3rem 0.75rem;
       font-size: 0.75rem;
       color: var(--text-muted);
       display: inline-flex;
@@ -283,6 +280,9 @@
 
     .section-header {
       margin-bottom: 1.25rem;
+      border-left: 3px solid;
+      border-image: linear-gradient(to bottom, var(--accent), var(--accent2)) 1;
+      padding-left: 0.75rem;
     }
 
     .section-eyebrow {
@@ -290,13 +290,13 @@
       text-transform: uppercase;
       letter-spacing: 0.18em;
       color: var(--accent);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
     }
 
     .section-title {
       font-size: 1.25rem;
       font-weight: 600;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.25rem;
     }
 
     .section-subtitle {
@@ -317,7 +317,7 @@
       }
     }
 
-    /* CARDS */
+    /* CARDS GENERALES */
 
     .card {
       background: #ffffff;
@@ -361,6 +361,8 @@
       border: 1px solid #bfdbfe;
     }
 
+    /* PROYECTOS + IMÁGENES */
+
     .project-tagline {
       font-size: 0.8rem;
       color: var(--text-soft);
@@ -379,6 +381,27 @@
       .projects-grid {
         grid-template-columns: minmax(0, 1fr);
       }
+    }
+
+    .project-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .project-thumb {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .project-body {
+      padding: 0.9rem 1rem 1rem;
+    }
+
+    .project-card h3 {
+      margin-top: 0.2rem;
     }
 
     .projects-note {
@@ -449,13 +472,34 @@
         flex-direction: column;
       }
     }
-    .project-thumb {
-  width: 100%;
-  border-radius: 0.75rem;
-  margin-bottom: 0.75rem;
-  object-fit: cover;
-  display: block;
+	/* VIDEO CV */
+.video-wrap { margin-top: 1.1rem; max-width: 420px; }
+
+.video-thumb{
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
+
+.video-play{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.1));
+  cursor:pointer;
+}
+
+.video-play span{
+  width:64px; height:64px; border-radius:999px;
+  background: linear-gradient(to right, var(--accent), var(--accent2));
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-size:28px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.3);
+}
+
+.video-caption{ font-size:0.8rem; color: var(--text-soft); margin-top:0.4rem; }
+	
   </style>
 </head>
 <body>
@@ -465,8 +509,8 @@
     <!-- NAV -->
     <header class="nav">
       <div class="nav-left">
-        <div class="brand-dot"></div>
-        <div class="brand-text">Félix Véjar · Data & BI</div>
+        <div class="nav-dot"></div>
+        <div class="nav-name">Félix Véjar · Data & BI</div>
       </div>
       <div class="nav-links">
         <a href="#sobre-mi">Sobre mí</a>
@@ -501,11 +545,32 @@
           <a class="btn-ghost" href="#contacto">
             Contacto rápido
           </a>
+
         </div>
+	<div class="video-wrap">
+  <div class="video-thumb">
+    <video
+      id="video-cv"
+      src="video/cv.mp4"
+      poster="video/thumb.jpg"
+      controls
+      preload="metadata"
+      style="width:100%; display:block;">
+    </video>
+
+    <div class="video-play" onclick="document.getElementById('video-cv').play(); this.style.display='none';">
+      <span>▶</span>
+    </div>
+  </div>
+
+  <div class="video-caption">
+    Video CV (90 segundos) — quién soy, cómo trabajo y qué puedo aportar a tu equipo.
+  </div>
+</div>
 
         <p class="hero-meta">
           <strong>Actual:</strong> Analista de Datos y Estadística en ANAFAPYT ·
-          <strong>Experiencia previa:</strong> Business Intelligence & E-commerce en Axalta México.
+          <strong>Experiencia previa:</strong> Business Intelligence & E-commerce en Axalta Coating Systems México.
         </p>
       </div>
 
@@ -526,7 +591,7 @@
         <div class="section-eyebrow">Perfil</div>
         <h2 class="section-title">Sobre mí</h2>
         <p class="section-subtitle">
-          Mezclo análisis cuantitativo, contexto de negocio y comunicación clara para construir historias accionables basadas en datos.
+          Mezclo análisis cuantitativo, contexto de negocio y comunicación visual para construir historias accionables basadas en datos.
         </p>
       </div>
 
@@ -554,53 +619,53 @@
         </div>
 
         <!-- Resumen Proyectos top -->
-        <section class="section" id="proyectos">
-      <div class="section-header">
-        <div class="section-eyebrow">Portafolio</div>
-        <h2 class="section-title" style="font-size:1.05rem;">Proyectos destacados</h2>
-      </div>
-
-        <!-- Proyectos top -->
-        <div>
-
-          <div class="card">
-            <img class="project-thumb" src="proj-funnel.png" alt="Proyecto de análisis de marketing">
-            <p class="project-tagline">Marketing · Análisis de datos</p>
-            <h3>Marketing Performance Analysis</h3>
-            <p>
-              Análisis del desempeño de una campaña de marketing usando datos de interacción y conversión.
-              Exploro métricas clave, detecto patrones en el comportamiento de los usuarios y propongo
-              recomendaciones basadas en datos para mejorar los resultados.
-            </p>
-            <p class="meta">
-              Código / notebook:
-              <a href="https://github.com/felixvejar/my_first_marketing_analysis" target="_blank">Ver en GitHub</a>
-            </p>
-            <div class="pill-list">
-              <span class="pill">Python</span>
-              <span class="pill">Pandas</span>
-              <span class="pill">EDA</span>
-              <span class="pill">Marketing Analytics</span>
-            </div>
+        <div id="proyectos">
+          <div class="section-header" style="margin-bottom:0.75rem; border-left:none; padding-left:0;">
+            <div class="section-eyebrow">Portafolio</div>
+            <h2 class="section-title" style="font-size:1.05rem;">Proyectos destacados</h2>
           </div>
 
-          <div class="card">
-            <img class="project-thumb" src="proj-abtest.png" alt="Proyecto de A/B testing">
-            <p class="project-tagline">Experimentación · Pruebas de hipótesis</p>
-            <h3>A/B Testing para Optimizar Conversión</h3>
-            <p>
-              Evaluación de una prueba A/B para medir el impacto de variantes sobre la conversión. Incluye
-              hipótesis, test estadístico, análisis de significancia y recomendaciones accionables para el negocio.
-            </p>
-            <p class="meta">
-              Código / notebook:
-              <a href="https://github.com/felixvejar/my_first_a_b_testing" target="_blank">Ver en GitHub</a>
-            </p>
-            <div class="pill-list">
-              <span class="pill">Python</span>
-              <span class="pill">SciPy</span>
-              <span class="pill">Estadística</span>
-              <span class="pill">Pruebas de hipótesis</span>
+          <<div class="card project-card">
+  <img class="project-thumb" src="proj-funnel.png" alt="Visual del proyecto de análisis de marketing">
+  <div class="project-body">
+    <p class="project-tagline">Marketing · Análisis de datos</p>
+    <h3>Marketing Performance Analysis</h3>
+    <p>
+      Análisis del desempeño de una campaña de marketing usando datos de interacción y conversión.
+      Exploro métricas clave, detecto patrones en el comportamiento de los usuarios y propongo
+      recomendaciones basadas en datos para mejorar los resultados.
+    </p>
+    <p class="meta">
+      Código / notebook:
+      <a href="https://github.com/felixvejar/my_first_marketing_analysis" target="_blank">Ver en GitHub</a>
+    </p>
+    <div class="pill-list">
+      <span class="pill">Python</span>
+      <span class="pill">Pandas</span>
+      <span class="pill">EDA</span>
+      <span class="pill">Marketing Analytics</span>
+    </div>
+  </div>
+</div>
+          <div class="card project-card">
+            <img class="project-thumb" src="proj-abtest.png" alt="Visual del experimento A/B">
+            <div class="project-body">
+              <p class="project-tagline">Experimentación · Pruebas de hipótesis</p>
+              <h3>A/B Testing para Optimizar Conversión</h3>
+              <p>
+                Evaluación de una prueba A/B para medir el impacto de variantes sobre la conversión. Incluye
+                hipótesis, test estadístico, análisis de significancia y recomendaciones accionables para el negocio.
+              </p>
+              <p class="meta">
+                Código / notebook:
+                <a href="https://github.com/felixvejar/my_first_a_b_testing" target="_blank">Ver en GitHub</a>
+              </p>
+              <div class="pill-list">
+                <span class="pill">Python</span>
+                <span class="pill">SciPy</span>
+                <span class="pill">Estadística</span>
+                <span class="pill">Pruebas de hipótesis</span>
+              </div>
             </div>
           </div>
 
@@ -609,6 +674,7 @@
             telecomunicaciones en la sección de proyectos completa.
           </p>
         </div>
+      </div>
     </section>
 
     <!-- SECCIÓN PROYECTOS COMPLETA -->
@@ -623,80 +689,88 @@
       </div>
 
       <div class="projects-grid">
-        <div class="card">
-          <img class="project-thumb" src="proj-videogames.png" alt="Proyecto de análisis de videojuegos">
-          <p class="project-tagline">Storytelling · Exploración</p>
-          <h3>Exploración y Dashboard del Mercado de Videojuegos</h3>
-          <p>
-            Análisis de ventas globales de videojuegos: tendencias, géneros, plataformas y diferencias
-            regionales. Incluye visualizaciones comparativas y análisis exploratorio profundo de datos.
-          </p>
-          <p class="meta">
-            Código / notebook:
-            <a href="https://github.com/felixvejar/video-game-data-analysis" target="_blank">Ver en GitHub</a>
-          </p>
-          <div class="pill-list">
-            <span class="pill">Python</span>
-            <span class="pill">Visualización</span>
-            <span class="pill">EDA</span>
-            <span class="pill">Storytelling</span>
+        <div class="card project-card">
+          <img class="project-thumb" src="proj-videogames.png" alt="Gráficos del mercado de videojuegos">
+          <div class="project-body">
+            <p class="project-tagline">Storytelling · Exploración</p>
+            <h3>Exploración y Dashboard del Mercado de Videojuegos</h3>
+            <p>
+              Análisis de ventas globales de videojuegos: tendencias, géneros, plataformas y diferencias
+              regionales. Incluye visualizaciones comparativas y análisis exploratorio profundo de datos.
+            </p>
+            <p class="meta">
+              Código / notebook:
+              <a href="https://github.com/felixvejar/video-game-data-analysis" target="_blank">Ver en GitHub</a>
+            </p>
+            <div class="pill-list">
+              <span class="pill">Python</span>
+              <span class="pill">Visualización</span>
+              <span class="pill">EDA</span>
+              <span class="pill">Storytelling</span>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <img class="project-thumb" src="proj-events.png" alt="Proyecto de análisis de eventos">
-          <p class="project-tagline">Comportamiento de usuario</p>
-          <h3>Event-Based User Behavior Analysis</h3>
-          <p>
-            Estudio del comportamiento de usuarios usando datos basados en eventos. Identificación de patrones
-            de uso, puntos críticos dentro de los procesos y segmentos con comportamientos diferenciados.
-          </p>
-          <p class="meta">
-            Código / notebook:
-            <a href="https://github.com/felixvejar/event_based_anaylisis_aab" target="_blank">Ver en GitHub</a>
-          </p>
-          <div class="pill-list">
-            <span class="pill">Python</span>
-            <span class="pill">EDA</span>
-            <span class="pill">Event Analytics</span>
+        <div class="card project-card">
+          <img class="project-thumb" src="proj-events.png" alt="Gráfica de eventos de usuario">
+          <div class="project-body">
+            <p class="project-tagline">Comportamiento de usuario</p>
+            <h3>Event-Based User Behavior Analysis</h3>
+            <p>
+              Estudio del comportamiento de usuarios usando datos basados en eventos. Identificación de patrones
+              de uso, puntos críticos dentro de los procesos y segmentos con comportamientos diferenciados.
+            </p>
+            <p class="meta">
+              Código / notebook:
+              <a href="https://github.com/felixvejar/event_based_anaylisis_aab" target="_blank">Ver en GitHub</a>
+            </p>
+            <div class="pill-list">
+              <span class="pill">Python</span>
+              <span class="pill">EDA</span>
+              <span class="pill">Event Analytics</span>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <img class="project-thumb" src="proj-taxis.png" alt="Análisis del servicio de taxis">
-          <p class="project-tagline">Series de tiempo · patrones</p>
-          <h3>Chicago Taxi Ride Analysis</h3>
-          <p>
-            Exploración de datos de viajes en taxi en Chicago: patrones temporales, comportamiento de tarifas,
-            estacionalidad y correlaciones entre distancia, tiempo y precio.
-          </p>
-          <p class="meta">
-            Código / notebook:
-            <a href="https://github.com/felixvejar/chicago_taxi_ride_analysis" target="_blank">Ver en GitHub</a>
-          </p>
-          <div class="pill-list">
-            <span class="pill">Python</span>
-            <span class="pill">Pandas</span>
-            <span class="pill">Tendencias temporales</span>
+        <div class="card project-card">
+          <img class="project-thumb" src="proj-taxis.png" alt="Mapa o gráfico de taxis en Chicago">
+          <div class="project-body">
+            <p class="project-tagline">Series de tiempo · patrones</p>
+            <h3>Chicago Taxi Ride Analysis</h3>
+            <p>
+              Exploración de datos de viajes en taxi en Chicago: patrones temporales, comportamiento de tarifas,
+              estacionalidad y correlaciones entre distancia, tiempo y precio.
+            </p>
+            <p class="meta">
+              Código / notebook:
+              <a href="https://github.com/felixvejar/chicago_taxi_ride_analysis" target="_blank">Ver en GitHub</a>
+            </p>
+            <div class="pill-list">
+              <span class="pill">Python</span>
+              <span class="pill">Pandas</span>
+              <span class="pill">Tendencias temporales</span>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <img class="project-thumb" src="proj-telecom.png" alt="Proyecto de datos en telecomunicaciones">
-          <p class="project-tagline">Sector telecom · negocio</p>
-          <h3>Análisis de Datos en Telecomunicaciones</h3>
-          <p>
-            Proyecto de análisis aplicado al sector telecomunicaciones, evaluando patrones de uso y tendencias.
-            Útil para comprender comportamiento de clientes y métricas clave del sector.
-          </p>
-          <p class="meta">
-            Código / notebook:
-            <a href="https://github.com/felixvejar/telecommunications_project" target="_blank">Ver en GitHub</a>
-          </p>
-          <div class="pill-list">
-            <span class="pill">Python</span>
-            <span class="pill">EDA</span>
-            <span class="pill">Business Analytics</span>
+        <div class="card project-card">
+          <img class="project-thumb" src="proj-telecom.png" alt="Gráficos del sector telecomunicaciones">
+          <div class="project-body">
+            <p class="project-tagline">Sector telecom · negocio</p>
+            <h3>Análisis de Datos en Telecomunicaciones</h3>
+            <p>
+              Proyecto de análisis aplicado al sector telecomunicaciones, evaluando patrones de uso y tendencias.
+              Útil para comprender comportamiento de clientes y métricas clave del sector.
+            </p>
+            <p class="meta">
+              Código / notebook:
+              <a href="https://github.com/felixvejar/telecommunications_project" target="_blank">Ver en GitHub</a>
+            </p>
+            <div class="pill-list">
+              <span class="pill">Python</span>
+              <span class="pill">EDA</span>
+              <span class="pill">Business Analytics</span>
+            </div>
           </div>
         </div>
       </div>
@@ -710,7 +784,7 @@
       </div>
 
       <div class="card">
-        <h3>Analista de Datos y Estadística · ANAFAPYT</h3>
+        <h3>Analista de Datos y Estadística · ANAFAPYT · Asociación Nacional de Fabricantes de Pinturas y Tintas</h3>
         <p class="meta">2024 – Actual · Industria de Pinturas y Tintas</p>
         <p>
           Responsable de desarrollar el Informe Anual del mercado de pinturas y tintas, integrando datos
@@ -728,7 +802,7 @@
       </div>
 
       <div class="card">
-        <h3>Business Intelligence & E-commerce Specialist · Axalta México</h3>
+        <h3>Business Intelligence & E-commerce Specialist · Axalta Coating Systems México</h3>
         <p class="meta">2021 – 2024 · Recubrimientos y Automotriz</p>
         <p>
           Automatización de reportes comerciales, análisis de ventas, creación de dashboards para directores
@@ -782,7 +856,7 @@
         </div>
 
         <div class="card">
-          <h3>¿Cómo trabajo con los datos?</h3>
+          <h3>Cómo trabajo con los datos</h3>
           <ul class="skills-list">
             <li><span class="skills-bullet"></span> Construyo embudos y métricas de producto/marketing.</li>
             <li><span class="skills-bullet"></span> Diseño pruebas A/B y analizo significancia estadística.</li>
@@ -794,7 +868,7 @@
       </div>
     </section>
 
-  <!-- CONTACTO -->
+    <!-- CONTACTO -->
     <section class="section" id="contacto">
       <div class="section-header">
         <div class="section-eyebrow">Contacto</div>
@@ -804,40 +878,42 @@
         </p>
       </div>
 
-      <!-- Card de datos de contacto -->
-      <div class="card">
-        <p class="contact-label">Correo</p>
-        <p>
-          <a href="mailto:felixvejarzepeda@yahoo.com">felixvejarzepeda@yahoo.com</a>
-        </p>
+      <div class="two-column">
+        <div>
+          <div class="card">
+            <p class="contact-label">Correo</p>
+            <p>
+              <a href="mailto:felixvejarzepeda@yahoo.com">felixvejarzepeda@yahoo.com</a>
+            </p>
+            <p class="contact-label" style="margin-top:0.75rem;">LinkedIn</p>
+            <p>
+              <a href="https://www.linkedin.com/in/f%C3%A9lix-v%C3%A9jar-zepeda-339404120/" target="_blank">
+                linkedin.com/in/félix-véjar-zepeda-339404120
+              </a>
+            </p>
+            <p class="contact-label" style="margin-top:0.75rem;">GitHub</p>
+            <p>
+              <a href="https://github.com/felixvejar" target="_blank">github.com/felixvejar</a>
+            </p>
+          </div>
+        </div>
 
-        <p class="contact-label" style="margin-top:0.75rem;">LinkedIn</p>
-        <p>
-          <a href="https://www.linkedin.com/in/f%C3%A9lix-v%C3%A9jar-zepeda-339404120/" target="_blank">
-            linkedin.com/in/félix-véjar-zepeda-339404120
-          </a>
-        </p>
-
-        <p class="contact-label" style="margin-top:0.75rem;">GitHub</p>
-        <p>
-          <a href="https://github.com/felixvejar" target="_blank">github.com/felixvejar</a>
-        </p>
-      </div>
-
-      <!-- Card de qué aportas al equipo -->
-      <div class="card">
-        <h3>¿Qué puedo aportar a tu equipo?</h3>
-        <p style="font-size:0.9rem;">
-          Puedo ayudarte a estructurar indicadores, construir dashboards ejecutivos y convertir bases de datos
-          dispersas en historias que se entienden en una reunión de 15 minutos. Me gusta trabajar cerca de
-          negocio y producto, y encontrar la narrativa detrás de cada métrica.
-        </p>
+        <div>
+          <div class="card">
+            <h3>¿Qué puedo aportar a tu equipo?</h3>
+            <p style="font-size:0.9rem;">
+              Puedo ayudarte a estructurar indicadores, construir dashboards ejecutivos y convertir bases de datos
+              dispersas en historias que se entienden en una reunión de 15 minutos. Me gusta trabajar cerca de
+              negocio y producto, y encontrar la narrativa detrás de cada métrica.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <footer>
       <div>© <span id="year"></span> Félix Véjar · Data & BI Storytelling</div>
-      <div>HTML + CSS · Deploy en Vercel</div>
+      <div>HTML + CSS</div>
     </footer>
 
   </div>
